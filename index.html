@@ -6,8 +6,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/estilo.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilo.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,17 +21,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar navbar-fixed-top">
         <div class="container" id="contenedor">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img title="Rusia 2018"
                         src="http://www.balonazos.com/wp-content/uploads/2015/11/RUSIA2018.png" /></a>
             </div>
 
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav ">
                 <li class="active"><a href="#">Inicio</a></li>
                 <li class="active"><a href="#">Sede</a></li>
-                <li class="active"><a href="#">Partidos</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Partidos <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#"> A </a></li>
+                        <li> <a href="#"> B </a></li>
+                        <li> <a href="#"> C </a></li>
+                        <li> <a href="#"> D </a></li>
+                        <li> <a href="#" id="partidoH"> H </a></li>
+                        <script> $("#partidoH").click(function (event) {
+                                $("#contenedor").load('selecciones/partido.html')
+                            })</script>
+                    </ul>
+                </li>
+
                 <li class="active"><a href="#">Grupos A</a></li>
                 <li class="active"><a href="#">Grupos B</a></li>
                 <li class="active"><a href="#">Grupos C</a></li>
@@ -49,10 +63,13 @@
                         <li> <a href="#"> Japón </a></li>
                     </ul>
                 </li>
-                <li class="active"><a href="#">Contacto</a></li>
+                <li class="active"><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
+
+    <br>
+    <br>
 
     <div class="container">
         <div class="row">
@@ -144,14 +161,15 @@
                 </picture>
                 <i>Logo del Mundial</i>
             </div>
- 
- </div>
+        </div>
+
         <footer class="footer">
             <div class="container">
                 <p class="text-muted">Programación Aplicaciones Web - 2018</p>
             </div>
         </footer>
-   
+
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
